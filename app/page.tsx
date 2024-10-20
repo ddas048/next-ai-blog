@@ -7,6 +7,10 @@ import { getAllBlogs } from "@/lib/supabase";
 import Form from "@/components/form";
 import { Card, CardContent } from "@/components/ui/card";
 
+// WHEN YOU WANT TO USE THE MAX DURATION,
+// YOU NEED TO ADD THE FOLLOWING LINE
+// BEFORE DEPLOYING TO VERCEL
+// 👉 ITS A PRO PLAN FEATURE
 export const maxDuration = 60;
 
 export default async function Home() {
