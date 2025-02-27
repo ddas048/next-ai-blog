@@ -4,7 +4,8 @@ import Markdown from "react-markdown";
 import { getBlogById } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 
-export default async function Blog({ params }: { params: { id: string } }) {
+export default async function Blog(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const { content, imageUrl } = await getBlogById(Number(params.id));
 
   return (
