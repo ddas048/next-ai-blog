@@ -9,7 +9,7 @@ export async function createCompletion(prompt: string) {
     return { error: "Prompt is required" };
   }
 
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) {
     return { error: "User is not logged in" };
   }
